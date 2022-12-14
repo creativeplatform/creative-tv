@@ -5,9 +5,8 @@ import { extendTheme } from '@chakra-ui/react'
 import { WagmiConfig, createClient } from 'wagmi'
 import { polygonMumbai } from 'wagmi/chains'
 import { getDefaultClient, ConnectKitProvider } from 'connectkit'
+import { siwe } from "../pages/api/siwe/siwe";
 import '../styles/globals.css'
-
-
 
 const walletClient = createClient(
   getDefaultClient({
@@ -32,11 +31,13 @@ const theme = extendTheme({ colors })
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={walletClient}>
+      <siwe.Provider>
       <ConnectKitProvider>
         <ChakraProvider theme={theme}>
           <Component {...pageProps} />
         </ChakraProvider>
       </ConnectKitProvider>
+      </siwe.Provider>
     </WagmiConfig>
   )
 }
