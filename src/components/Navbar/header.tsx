@@ -38,7 +38,7 @@ import NextLink from 'next/link'
 import { useScroll } from 'framer-motion'
 // import Head, { MetaProps } from '../layout/Head';
 // import Balance from "../Balance/Balance";
-// import Logo from '../Navbar/Logo'
+import Logo from '../../assets/creative-logo.svg'
 // import { useAuth } from '../../../services/context/auth'
 import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineMenu } from 'react-icons/ai'
@@ -150,7 +150,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 onClick={() => router.push('/')}
               >
                 <HStack>
-                  {/* <Logo /> */}
+                    <Logo aria-label="Website logo" height={50} width={50} />
                   <Heading
                     color={useColorModeValue('gray.500', 'white')}
                     as="h1"
