@@ -1,3 +1,4 @@
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useToast } from '@chakra-ui/react'
 import {
@@ -42,7 +43,7 @@ import { useScroll } from 'framer-motion'
 import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaMoon, FaSun } from 'react-icons/fa'
-import { ReactNode, useEffect, useRef, useState } from 'react'
+
 import { ConnectWallet } from './ConnectWallet'
 
 /**
