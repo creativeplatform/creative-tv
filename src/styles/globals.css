@@ -15,6 +15,30 @@ a {
   box-sizing: border-box;
 }
 
+.shopping-box {
+  position: relative;
+}
+
+.shopping-box .value-box {
+  position: absolute;
+  top: -11px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  left: 13px;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 1;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.shopping-box .value-box .value-bag {
+  font-size: 12px;
+  font-weight: 200;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
