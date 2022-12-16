@@ -111,6 +111,83 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
       rounded="sm"
       shadow="sm"
     >
+      <chakra.div h="4.5rem" mx="auto" maxW="1200px">
+          <Flex
+            w="full"
+            h="full"
+            px="6"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Flex>
+              <HStack spacing="5" display={{ base: 'none', md: 'flex' }}>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/discover')}
+                >
+                  Discover
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                >
+                  Activity
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/vote')}
+                >
+                  Vote
+                </Button>
+                <Center height="50px">
+                  <Divider orientation="vertical" />
+                </Center>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      bg={bg}
+                      color="gray.500"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="md"
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                      Community
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="100vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Features />
+                  </PopoverContent>
+                </Popover>
+              </HStack>
+            </Flex>
+            
+          </Flex>
+        </chakra.div>
+
       <CloseButton
         aria-label="Close menu"
         justifySelf="self-start"
@@ -310,54 +387,44 @@ const Features = (props: any) => {
         py={6}
         p={{ sm: 8 }}
       >
-        <LinkBox as="article">
+        <LinkBox color={tcl}>
           <Section
             title="How It Works"
             icon={
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={1}
+                strokeWidth="1"
                 d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"
               />
             }
           >
-            <NextLink
-              href="https://creativeplatform.xyz/docs/intro"
-              target="_blank"
-              passHref
-            >
-              <LinkOverlay target="_blank">
-                <Text>Documentation on how the Creative platform works</Text>
-              </LinkOverlay>
-            </NextLink>
+            <LinkOverlay href="https://creativeplatform.xyz/docs/intro" target="_blank">
+              <Text>Documentation on how the Creative platform works</Text>
+            </LinkOverlay>
           </Section>
         </LinkBox>
-        <Section
-          title="CREATIVE Platform"
-          icon={
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1"
-              d="M17.919,4.633l-3.833,2.48V6.371c0-1-0.815-1.815-1.816-1.815H3.191c-1.001,0-1.816,0.814-1.816,1.815v7.261c0,1.001,0.815,1.815,1.816,1.815h9.079c1.001,0,1.816-0.814,1.816-1.815v-0.739l3.833,2.478c0.428,0.226,0.706-0.157,0.706-0.377V5.01C18.625,4.787,18.374,4.378,17.919,4.633 M13.178,13.632c0,0.501-0.406,0.907-0.908,0.907H3.191c-0.501,0-0.908-0.406-0.908-0.907V6.371c0-0.501,0.407-0.907,0.908-0.907h9.079c0.502,0,0.908,0.406,0.908,0.907V13.632zM17.717,14.158l-3.631-2.348V8.193l3.631-2.348V14.158z"
-            />
-          }
-        >
-          <NextLink
-              href="https://yellow-term-1103.on.fleek.co/"
-              target={'_blank'}
-              passHref
-            >
-              <LinkOverlay>
-          <Text>
-            Creatives want the ability to create great content and profits when
-            they want without having to shell out 💰 to do it. So we built our
-            own solution.
-          </Text>
+        <LinkBox color={tcl}>
+          <Section
+            title="CREATIVE Platform"
+            icon={
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
+                d="M17.919,4.633l-3.833,2.48V6.371c0-1-0.815-1.815-1.816-1.815H3.191c-1.001,0-1.816,0.814-1.816,1.815v7.261c0,1.001,0.815,1.815,1.816,1.815h9.079c1.001,0,1.816-0.814,1.816-1.815v-0.739l3.833,2.478c0.428,0.226,0.706-0.157,0.706-0.377V5.01C18.625,4.787,18.374,4.378,17.919,4.633 M13.178,13.632c0,0.501-0.406,0.907-0.908,0.907H3.191c-0.501,0-0.908-0.406-0.908-0.907V6.371c0-0.501,0.407-0.907,0.908-0.907h9.079c0.502,0,0.908,0.406,0.908,0.907V13.632zM17.717,14.158l-3.631-2.348V8.193l3.631-2.348V14.158z"
+              />
+            }
+          >
+          <LinkOverlay href="https://yellow-term-1103.on.fleek.co/" target={'_blank'}>
+            <Text>
+              Creatives want the ability to create great content and profits when
+              they want without having to shell out 💰 to do it. So we built our
+              own solution.
+            </Text>
           </LinkOverlay>
-          </NextLink>
-        </Section>
+          </Section>
+        </LinkBox>
         <LinkBox color={tcl}>
           <Section
             title="CREATIVE Stageverse"
@@ -370,18 +437,14 @@ const Features = (props: any) => {
               />
             }
           >
-            <NextLink
+            <LinkOverlay
               href="https://alpha.stageverse.com/#/space/63291415ea801e00094ebbd0/1014-26"
-              target={'_blank'}
-              passHref
-            >
-              <LinkOverlay>
-                <Text>
-                  Our metaverse playground for interacting with all of our
-                  digital collectibles.
-                </Text>
-              </LinkOverlay>
-            </NextLink>
+              target={'_blank'}>
+              <Text>
+                Our metaverse playground for interacting with all of our
+                digital collectibles.
+              </Text>
+            </LinkOverlay>
           </Section>
         </LinkBox>
         <LinkBox color={tcl}>
@@ -396,22 +459,18 @@ const Features = (props: any) => {
               />
             }
           >
-            <NextLink
-              href="https://boardroom.io/creativeorg/overview"
-              target={'_blank'}
-              passHref
-            >
-              <LinkOverlay>
-                <Text>
-                  Looking for a way to help liven up our community? Introducing
-                  DAO Proposals! Our community is managed via a DAO and all that
-                  action happens here. From exciting new features to heated
-                  debates on the best way to run things, it’s all happening on
-                  DAO Proposals. So come join us and see what all the fuss is
-                  about!
-                </Text>
-              </LinkOverlay>
-            </NextLink>
+            <LinkOverlay
+            href="https://boardroom.io/creativeorg/overview"
+            target={'_blank'}>
+              <Text>
+                Looking for a way to help liven up our community? Introducing
+                DAO Proposals! Our community is managed via a DAO and all that
+                action happens here. From exciting new features to heated
+                debates on the best way to run things, it’s all happening on
+                DAO Proposals. So come join us and see what all the fuss is
+                about!
+              </Text>
+            </LinkOverlay>
           </Section>
         </LinkBox>
 
@@ -427,18 +486,14 @@ const Features = (props: any) => {
               />
             }
           >
-            <NextLink
+            <LinkOverlay
               href="https://feedback.creativeplatform.xyz"
-              target={'_blank'}
-              passHref
-            >
-              <LinkOverlay>
-                <Text>
-                  Suggest a feature to the Creative community for the good of
-                  the platform.
-                </Text>
-              </LinkOverlay>
-            </NextLink>
+              target={'_blank'}>
+              <Text>
+                Suggest a feature to the Creative community for the good of
+                the platform.
+              </Text>
+            </LinkOverlay>
           </Section>
         </LinkBox>
       </SimpleGrid>
@@ -479,15 +534,9 @@ const Features = (props: any) => {
                   d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </chakra.svg>
-              <NextLink
-                href="https://app.clarity.so/creativeOrg/docs/d259949c-fc14-484c-a53f-f6e80ce0ce04"
-                target={'_blank'}
-                passHref
-              >
-                <LinkOverlay>
+                <LinkOverlay href="https://app.clarity.so/creativeOrg/docs/d259949c-fc14-484c-a53f-f6e80ce0ce04" target={'_blank'}>
                   <chakra.span ml={3}>Watch Demo</chakra.span>
                 </LinkOverlay>
-              </NextLink>
             </LinkBox>
           </Box>
 
