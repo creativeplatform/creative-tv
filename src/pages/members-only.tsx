@@ -3,7 +3,8 @@ import { NextPage, GetServerSideProps } from 'next';
 import { siwe } from './api/siwe/siwe';
 
 const walletHasToken = async (address: string): Promise<boolean> => {
-  return // Your implementation of token-gated logic goes here
+  return true;
+  // Your implementation of token-gated logic goes here
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
