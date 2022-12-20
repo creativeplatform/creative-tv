@@ -633,6 +633,20 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/upload-video-assets')}
+                    >
+                      Upload Video Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('/discover')}
                     >
                       FAQ
