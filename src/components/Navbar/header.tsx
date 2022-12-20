@@ -137,7 +137,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('')}
                 >
                   About
                 </Button>
@@ -173,7 +173,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       FAQ
                     </Button>
@@ -187,7 +187,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Contact Us
                     </Button>
@@ -201,7 +201,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Error Page
                     </Button>
@@ -217,7 +217,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('')}
                 >
                   Events
                 </Button>
@@ -254,7 +254,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Our Works
                     </Button>
@@ -268,7 +268,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Case Details
                     </Button>
@@ -306,7 +306,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Sidebar
                     </Button>
@@ -320,7 +320,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Horizontal Boxes
                     </Button>
@@ -334,7 +334,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Full Width
                     </Button>
@@ -348,7 +348,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Single Post Sidebar
                     </Button>
@@ -362,7 +362,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Single Post Full Width
                     </Button>
@@ -403,7 +403,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop
                     </Button>
@@ -417,7 +417,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop List
                     </Button>
@@ -431,7 +431,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Lookbook
                     </Button>
@@ -445,7 +445,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Collection
                     </Button>
@@ -459,7 +459,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Page
                     </Button>
@@ -473,7 +473,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Big Images
                     </Button>
@@ -487,7 +487,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Big Slider
                     </Button>
@@ -501,7 +501,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shopping Bag
                     </Button>
@@ -597,7 +597,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('')}
                 >
                   About
                 </Button>
@@ -633,7 +633,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/upload-video-assets')}
+                      onClick={() => router.push('/pages/upload-video-assets')}
                     >
                       Upload Video Assets
                     </Button>
@@ -647,7 +647,21 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('/pages/swiper-controls')}
+                    >
+                      Swiper Controls
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/')}
                     >
                       FAQ
                     </Button>
@@ -661,7 +675,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('/')}
                     >
                       Contact Us
                     </Button>
@@ -675,7 +689,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('/')}
                     >
                       Error Page
                     </Button>
@@ -691,7 +705,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('/')}
                 >
                   Events
                 </Button>
@@ -728,7 +742,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Our Works
                     </Button>
@@ -742,7 +756,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Case Details
                     </Button>
@@ -780,7 +794,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Sidebar
                     </Button>
@@ -794,7 +808,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Horizontal Boxes
                     </Button>
@@ -808,7 +822,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       News Full Width
                     </Button>
@@ -822,7 +836,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Single Post Sidebar
                     </Button>
@@ -836,7 +850,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Single Post Full Width
                     </Button>
@@ -877,7 +891,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop
                     </Button>
@@ -891,7 +905,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop List
                     </Button>
@@ -905,7 +919,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Lookbook
                     </Button>
@@ -919,7 +933,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Collection
                     </Button>
@@ -933,7 +947,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Page
                     </Button>
@@ -947,7 +961,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Big Images
                     </Button>
@@ -961,7 +975,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shop Product Big Slider
                     </Button>
@@ -975,7 +989,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/discover')}
+                      onClick={() => router.push('')}
                     >
                       Shopping Bag
                     </Button>

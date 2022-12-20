@@ -12,7 +12,7 @@ import {
   import { motion, useAnimation } from "framer-motion";
   import { useRouter } from 'next/router'
   import React, { ReactNode } from 'react'
-
+  
   const PreviewImage = forwardRef<BoxProps, typeof Box>((props, ref) => {
     return (
       <Box
@@ -47,15 +47,12 @@ import {
     const router = useRouter()
     return (
         <Box>
-            <Breadcrumb
-                    spacing="8px"
-                    separator={<Icon color="gray.300" name="chevron-right" />}
-                >
+            <Breadcrumb>
                 <BreadcrumbItem>
                     <BreadcrumbLink onClick={() => router.push('/')}>Home</BreadcrumbLink>
                 </BreadcrumbItem>
 
-                <BreadcrumbItem isCurrentPage>
+                <BreadcrumbItem isCurrentPage className="active-crumb">
                     <BreadcrumbLink href='#'>Upload Video Assets</BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
@@ -77,7 +74,7 @@ import {
                     animate="rest"
                     whileHover="hover"
                 >
-                    <Box position="relative" height="100%" width="100%">
+                    <Box height="100%" width="100%">
                     <Box
                         position="absolute"
                         top="0"

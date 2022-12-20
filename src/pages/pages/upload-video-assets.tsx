@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../components/Navbar/header'
-import UploadVideoAsset from '../components/layout/UploadVideoAsset'
+import Header from '../../components/Navbar/header'
+import UploadVideoAsset from '../../components/pages/UploadVideoAsset'
 
 export default function Home() {
   return (
