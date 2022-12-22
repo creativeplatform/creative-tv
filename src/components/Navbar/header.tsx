@@ -661,7 +661,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/')}
+                      onClick={() => router.push('')}
                     >
                       FAQ
                     </Button>
@@ -675,7 +675,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/')}
+                      onClick={() => router.push('')}
                     >
                       Contact Us
                     </Button>
@@ -689,7 +689,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('/')}
+                      onClick={() => router.push('')}
                     >
                       Error Page
                     </Button>
@@ -705,7 +705,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('')}
                 >
                   Events
                 </Button>
