@@ -172,8 +172,8 @@ a {
 }
 .mint-button{
   position: absolute;
-  left: 63%;
-  top: 620px;
+  left: 57%;
+  top: 500px;
 
   padding: 14px 24px !important;
   color: #ffffff !important;
@@ -188,4 +188,9 @@ a {
 .mint-button:hover{
   transform: translateY(-6px) !important;
   box-shadow: 0 6px 40px -6px #ec407a !important;
+}
+.address-mint{
+  padding: 20px;
+  display: flex;
+  gap: 10px;
 }

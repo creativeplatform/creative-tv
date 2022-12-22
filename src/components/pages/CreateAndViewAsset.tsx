@@ -7,8 +7,8 @@ import {
     Box, Text, Badge, Button, Flex
   } from "@chakra-ui/react";
   import NextLink from 'next/link'
-// import {createError, createStatus}  from 'http-errors';
 
+import { useRouter } from 'next/router'
 const CreateAndViewAsset = () => {
     const [video, setVideo] = useState<File | undefined>();
     const {
@@ -62,7 +62,7 @@ const CreateAndViewAsset = () => {
           : null,
       [progress],
     );
-   
+    const router = useRouter()
     return (
       <Box>
         {!asset && (
@@ -82,9 +82,9 @@ const CreateAndViewAsset = () => {
             <Player title={asset[0].name} playbackId={asset[0].playbackId} />
         )}
         {asset?.[0]?.playbackId && (
-            <NextLink href={`/mint-nft-video?assetId=${asset[0].id}`} target='_blank' passHref className='mint-button'>
-                Mint NFT
-            </NextLink>
+            <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'>
+                Proceed to Mint NFT
+            </Button>
         )}
    
         <Flex className='upload-button'>
