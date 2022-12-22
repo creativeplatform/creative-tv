@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useToast } from '@chakra-ui/react'
+import { FaShoppingBag, FaUser } from 'react-icons/fa';
 import {
   Alert,
   AlertIcon,
@@ -33,6 +34,7 @@ import {
   Text,
   LinkBox,
   LinkOverlay,
+  Avatar, AvatarBadge, AvatarGroup
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { useScroll } from 'framer-motion'
@@ -45,6 +47,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 import { ConnectWallet } from './ConnectWallet'
+
 
 /**
  * Constants & Helpers
@@ -110,6 +113,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
       spacing={3}
       rounded="sm"
       shadow="sm"
+      className="nav-items"
     >
       <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex
@@ -118,71 +122,411 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
             px="6"
             alignItems="center"
             justifyContent="space-between"
+            className='mobile-view'
           >
             <Flex>
-              <HStack spacing="5" display={{ base: 'none', md: 'flex' }}>
+            <HStack spacing="5" gap={30} display={{ base: 'flex', md: 'flex' }}>
+            <ConnectWallet />
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('')}
                 >
-                  Discover
+                  About
                 </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: 'none' }}
-                >
-                  Activity
-                </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/vote')}
-                >
-                  Vote
-                </Button>
-                <Center height="50px">
-                  <Divider orientation="vertical" />
-                </Center>
                 <Popover>
                   <PopoverTrigger>
                     <Button
                       bg={bg}
-                      color="gray.500"
+                      color="black.700"
                       display="inline-flex"
                       alignItems="center"
-                      fontSize="md"
+                      fontSize="14px"
+                      px="0"
+                      fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                      Community
+                       Pages 
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="100vw"
+                    w="15vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
                   >
-                    <Features />
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      FAQ
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Contact Us
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Error Page
+                    </Button>
                   </PopoverContent>
                 </Popover>
+                <Button
+                  bg={bg}
+                  color="black.700"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('')}
+                >
+                  Events
+                </Button>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      sx={{ borderRadius: "0px" }}
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      px="0"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       Our Works 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Our Works
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Case Details
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      px="0"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       News 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Sidebar
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Horizontal Boxes
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Full Width
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Single Post Sidebar
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Single Post Full Width
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+                {/* <Center height="50px">
+                  <Divider orientation="vertical" />
+                </Center> */}
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      px="0"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       Shop 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop List
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Lookbook
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Collection
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Page
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Big Images
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Big Slider
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shopping Bag
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+
+                
+              {/* <NotificationDrawer /> */}
+              <Box className='mobile-icon-box'>
+              <FaUser className='user-icon' />
+              <Box className='shopping-box' display={{ base: 'flex' }}>
+                <FaShoppingBag />
+                <Box className='value-box'>
+                  <Text className='value-bag' size="sm" fontWeight="700">
+                    0
+                  </Text>
+                </Box>
+              </Box>
+              <Text fontWeight="700">
+                  USD
+              </Text>
+              </Box>
               </HStack>
+
+           
             </Flex>
             
           </Flex>
@@ -202,12 +546,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
         shadow={y > height ? 'sm' : undefined}
         transition="box-shadow 0.2s"
         bg={bg}
-        borderTop="6px solid"
-        borderTopColor="brand.400"
+        borderBottom="6px solid"
+        borderBottomColor="brand.400"
         w="full"
         overflowY="hidden"
       >
-        <chakra.div h="4.5rem" mx="auto" maxW="1200px">
+        <chakra.div h="84px" mx="auto" maxW="1770px">
           <Flex
             w="full"
             h="full"
@@ -218,20 +562,23 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
             <Flex align="flex-start">
               <Button
                 bg={bg}
-                color="gray.500"
+                px="0"
+                color="black.900"
                 display="inline-flex"
                 alignItems="center"
-                fontSize="md"
+                fontSize="16px"
                 _hover={{ color: 'black' }}
-                _focus={{ boxShadow: 'none', color: 'gray.500' }}
+                _focus={{ boxShadow: 'none', color: 'black.500' }}
                 onClick={() => router.push('/')}
               >
                 <HStack>
                     <Logo aria-label="Website logo" height={50} width={50} />
                   <Heading
-                    color={useColorModeValue('gray.500', 'white')}
+                    color={useColorModeValue('black.900', 'black')}
                     as="h1"
-                    size="md"
+                    size="16px"
+                    fontWeight={900}
+                    gap={5}
                   >
                     CREATIVE TV
                   </Heading>
@@ -239,73 +586,421 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
               </Button>
             </Flex>
             <Flex>
-              <HStack spacing="5" display={{ base: 'none', md: 'flex' }}>
+              <HStack spacing="5" gap={30} display={{ base: 'none', md: 'flex' }}>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/discover')}
+                  onClick={() => router.push('')}
                 >
-                  Discover
+                  About
                 </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: 'none' }}
-                >
-                  Activity
-                </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: 'none' }}
-                  onClick={() => router.push('/vote')}
-                >
-                  Vote
-                </Button>
-                <Center height="50px">
-                  <Divider orientation="vertical" />
-                </Center>
                 <Popover>
                   <PopoverTrigger>
                     <Button
                       bg={bg}
-                      color="gray.500"
+                      color="black.700"
                       display="inline-flex"
                       alignItems="center"
-                      fontSize="md"
+                      fontSize="14px"
+                      px="0"
+                      fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                      Community
+                       Pages 
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="100vw"
+                    w="15vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
                   >
-                    <Features />
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/upload-video-assets')}
+                    >
+                      Upload Video Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/swiper-controls')}
+                    >
+                      Swiper Controls
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      FAQ
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Contact Us
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Error Page
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+                <Button
+                  bg={bg}
+                  color="black.700"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('')}
+                >
+                  Events
+                </Button>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      sx={{ borderRadius: "0px" }}
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      px="0"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       Our Works 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Our Works
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Case Details
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      px="0"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       News 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Sidebar
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Horizontal Boxes
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      News Full Width
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Single Post Sidebar
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Single Post Full Width
+                    </Button>
+                  </PopoverContent>
+                </Popover>
+                {/* <Center height="50px">
+                  <Divider orientation="vertical" />
+                </Center> */}
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      px="0"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      rightIcon={<IoIosArrowDown />}
+                    >
+                       Shop 
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    w="15vw"
+                    maxW="md"
+                    _focus={{ boxShadow: 'md' }}
+                  >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop List
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Lookbook
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Collection
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Page
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Big Images
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shop Product Big Slider
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('')}
+                    >
+                      Shopping Bag
+                    </Button>
                   </PopoverContent>
                 </Popover>
               </HStack>
             </Flex>
-              <ConnectWallet />
+              
             {children}
-            <HStack spacing="5" display={{ base: 'none', md: 'flex' }}>
+            <HStack spacing="5" display={{ base: 'flex', md: 'flex' }}>
+            <ConnectWallet />
               {/* <NotificationDrawer /> */}
               <IconButton
                 size="md"
@@ -326,6 +1021,18 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
               />
+              <FaUser className='user-icon' />
+              <Box className='shopping-box' display={{ base: 'flex' }}>
+                <FaShoppingBag />
+                <Box className='value-box'>
+                  <Text className='value-bag' size="sm" fontWeight="700">
+                    0
+                  </Text>
+                </Box>
+              </Box>
+              <Text fontWeight="700">
+                  USD
+              </Text>
             </HStack>
           </Flex>
           {MobileNavContent}

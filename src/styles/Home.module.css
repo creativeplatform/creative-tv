@@ -108,6 +108,10 @@
   margin-left: 0.5rem;
 }
 
+.chakra-stack  {
+  display: flex !important;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
