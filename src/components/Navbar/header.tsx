@@ -38,10 +38,8 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { useScroll } from 'framer-motion'
-// import Head, { MetaProps } from '../layout/Head';
-// import Balance from "../Balance/Balance";
+
 import Logo from '../../assets/creative-logo.svg'
-// import { useAuth } from '../../../services/context/auth'
 import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaMoon, FaSun } from 'react-icons/fa'
@@ -163,6 +161,35 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
                   >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/upload-video-assets')}
+                    >
+                      Upload Video Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/swiper-controls')}
+                    >
+                      Swiper Controls
+                    </Button>
+                    
                     <Button
                       bg={bg}
                       color="black.700"
