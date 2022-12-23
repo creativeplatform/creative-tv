@@ -12,6 +12,6 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const jsonDirectory = path.join(process.cwd(), 'json');
-  const fileContents = await fs.readFile(jsonDirectory + '/swiper-data.json', 'utf8');
+  const fileContents = await fs.readFile(jsonDirectory + '/all-assets.json', 'utf8');
   res.status(200).json({ data: fileContents })
 }

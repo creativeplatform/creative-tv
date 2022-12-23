@@ -100,7 +100,7 @@ const handler = async (
       const offerTokenHash = await tokenClient.offerToken(
         issuer,
         receiver,
-        issuer.address(),
+        issuer.address().hex(),
         COLLECTION_NAME,
         tokenName,
         1,

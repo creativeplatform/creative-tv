@@ -74,9 +74,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
   const router = useRouter()
   const toast = useToast()
 
-
-
-
   const [y, setY] = useState(0)
   const { scrollY } = useScroll()
   const mobileNav = useDisclosure()
@@ -172,9 +169,37 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/all-assets')}
+                    >
+                       All Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('/pages/upload-video-assets')}
                     >
                       Upload Video Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/play-ipfs-video')}
+                    >
+                      Play Video
                     </Button>
                     <Button
                       bg={bg}
@@ -665,9 +690,37 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       fontWeight={700}
                       _hover={{ color: cl }}
                       _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/all-assets')}
+                    >
+                       All Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('/pages/upload-video-assets')}
                     >
                       Upload Video Assets
+                    </Button>
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/play-ipfs-video')}
+                    >
+                      Play Video
                     </Button>
                     <Button
                       bg={bg}
