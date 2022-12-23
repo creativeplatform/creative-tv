@@ -124,7 +124,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
           >
             <Flex>
             <HStack spacing="5" gap={30} display={{ base: 'flex', md: 'flex' }}>
-            <ConnectWallet />
                 <Button
                   bg={bg}
                   color="black.700"
@@ -147,6 +146,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       display="inline-flex"
                       alignItems="center"
                       fontSize="14px"
+                      className="content_items"
                       px="0"
                       fontWeight={700}
                       _hover={{ color: cl }}
@@ -159,6 +159,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Button
@@ -189,7 +190,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Swiper Controls
                     </Button>
-                    
+
                     <Button
                       bg={bg}
                       color="black.700"
@@ -269,6 +270,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Button
@@ -321,6 +323,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Button
@@ -418,6 +421,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Button
@@ -535,22 +539,22 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   </PopoverContent>
                 </Popover>
 
-                
+                <ConnectWallet />
               {/* <NotificationDrawer /> */}
-              <Box className='mobile-icon-box'>
-              <FaUser className='user-icon' />
-              <Box className='shopping-box' display={{ base: 'flex' }}>
-                <FaShoppingBag />
-                <Box className='value-box'>
-                  <Text className='value-bag' size="sm" fontWeight="700">
-                    0
-                  </Text>
+                <Box className='mobile-icon-box'>
+                  <FaUser className='user-icon' />
+                    <Box className='shopping-box' display={{ base: 'flex' }}>
+                      <FaShoppingBag />
+                      <Box className='value-box'>
+                        <Text className='value-bag' size="sm" fontWeight="700">
+                          0
+                        </Text>
+                      </Box>
+                    </Box>
+                    <Text fontWeight="700">
+                        USD
+                    </Text>
                 </Box>
-              </Box>
-              <Text fontWeight="700">
-                  USD
-              </Text>
-              </Box>
               </HStack>
 
            
@@ -562,6 +566,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
       <CloseButton
         aria-label="Close menu"
         justifySelf="self-start"
+        className="close-btn"
         onClick={mobileNav.onClose}
       />
     </VStack>

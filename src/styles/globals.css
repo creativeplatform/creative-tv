@@ -49,7 +49,30 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .css-16z35ig>*:not(style)~*:not(style) {
+    margin-inline-start: 0 !important;
+  }
+
+  .iqaPMJ {
+    padding: 12px 6px !important;
+    font-size: 12px !important;
+  }
+
+  .css-1pwcm1s {
+    margin-left: 2px !important;
+  }
+
+  .user-icon {
+    margin-left: 2px !important;
+  }
+
+  .css-16z35ig {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 991px) {
   .sc-iWOQzb, .css-1pwcm1s, .shopping-box, .chakra-text, .user-icon, .css-1yj0ggl {
     display: none !important;
   }
@@ -63,10 +86,41 @@ a {
     width: auto !important;
   }
 
+  .mobile-view {
+    padding-top: 60px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  .css-4qsl6b {
+    display: block;
+  }
+
+  .css-1dm470m {
+    display: block !important;
+  }
+
+  .css-1dm470m svg {
+    margin: auto !important;
+  }
+
+  .css-16z35ig {
+    display: none !important;
+  }
+
   .mobile-icon-box {
+    position: absolute;
+    top: 22px;
+    left: 0;
     display: flex;
     margin: 0;
-    width: 50%;
+    width: 30%;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
@@ -85,7 +139,7 @@ a {
   }
 
   .css-5eyd05 {
-    top: 82px !important;
+    margin: 0 !important;
   }
 
   .css-1bki46w {
@@ -102,21 +156,37 @@ a {
     gap: 0 !important;
   }
 
-  .css-5eyd05 {
+  /* .nav-items  {
     height: 100vh;
-  }
+  } */
 
   .nav-items .css-1bki46w {
     height: auto !important;
   }
   .nav-items .css-1bki46w button {
     margin: 0 !important;
+    width: 100%;
+    justify-content: space-between;
+    padding: 25px 0px;
+  }
+  .mobile-view div div .sc-iWOQzb {
+    padding: 14px 24px !important;
+    margin-top: 30px !important;
   }
   .css-k008qs {
     width: 100% !important;
   }
   .css-fezd3y {
     height: 100% !important;
+  }
+  .content_child_items {
+    width: 95% !important;
+    padding: 15px 30px;
+    margin: auto;
+  }
+  .chakra-popover__popper.css-1qq679y {
+    width: 100% !important;
+    margin-left: 0;
   }
 }
 .css-70qvj9{
