@@ -137,7 +137,19 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('')}
                 >
-                  About
+                  Blog
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/discover')}
+                >
+                  Discover
                 </Button>
                 <Popover>
                   <PopoverTrigger>
@@ -216,20 +228,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Contact Us
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
                       Error Page
                     </Button>
                   </PopoverContent>
@@ -248,10 +246,21 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 >
                   Events
                 </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/vote')}
+                >
+                  Vote
+                </Button>
                 <Popover>
                   <PopoverTrigger>
                     <Button
-                      sx={{ borderRadius: "0px" }}
                       bg={bg}
                       color="black.700"
                       display="inline-flex"
@@ -263,7 +272,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Our Works 
+                       Free Channels 
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -283,7 +292,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Our Works
+                      CREATIVE Kids
                     </Button>
                     <Button
                       bg={bg}
@@ -297,45 +306,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Case Details
-                    </Button>
-                  </PopoverContent>
-                </Popover>
-                <Popover>
-                  <PopoverTrigger>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      display="inline-flex"
-                      alignItems="center"
-                      px="0"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      rightIcon={<IoIosArrowDown />}
-                    >
-                       News 
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    w="15vw"
-                    maxW="md"
-                    _focus={{ boxShadow: 'md' }}
-                  >
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      News Sidebar
+                      News
                     </Button>
                     <Button
                       bg={bg}
@@ -349,49 +320,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      News Horizontal Boxes
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      News Full Width
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Single Post Sidebar
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Single Post Full Width
+                      Learning
                     </Button>
                   </PopoverContent>
                 </Popover>
@@ -412,7 +341,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Shop 
+                       Community
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -420,118 +349,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
                   >
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop List
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Lookbook
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Collection
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Page
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Big Images
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Big Slider
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shopping Bag
-                    </Button>
+                    <Features />
                   </PopoverContent>
                 </Popover>
 
@@ -539,23 +357,9 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
               {/* <NotificationDrawer /> */}
               <Box className='mobile-icon-box'>
               <FaUser className='user-icon' />
-              <Box className='shopping-box' display={{ base: 'flex' }}>
-                <FaShoppingBag />
-                <Box className='value-box'>
-                  <Text className='value-bag' size="sm" fontWeight="700">
-                    0
-                  </Text>
-                </Box>
-              </Box>
-              <Text fontWeight="700">
-                  USD
-              </Text>
               </Box>
               </HStack>
-
-           
-            </Flex>
-            
+            </Flex> 
           </Flex>
         </chakra.div>
 
@@ -601,7 +405,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 <HStack>
                     <Logo aria-label="Website logo" height={50} width={50} />
                   <Heading
-                    color={useColorModeValue('black.900', 'black')}
+                    color={useColorModeValue('black.900', 'white')}
                     as="h1"
                     size="16px"
                     fontWeight={900}
@@ -614,7 +418,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
             </Flex>
             <Flex>
               <HStack spacing="5" gap={30} display={{ base: 'none', md: 'flex' }}>
-                <Button
+              <Button
                   bg={bg}
                   color="black.700"
                   display="inline-flex"
@@ -626,7 +430,19 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('')}
                 >
-                  About
+                  Blog
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/discover')}
+                >
+                  Discover
                 </Button>
                 <Popover>
                   <PopoverTrigger>
@@ -678,6 +494,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Swiper Controls
                     </Button>
+                    
                     <Button
                       bg={bg}
                       color="black.700"
@@ -691,20 +508,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('')}
                     >
                       FAQ
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Contact Us
                     </Button>
                     <Button
                       bg={bg}
@@ -736,10 +539,21 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 >
                   Events
                 </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: 'none' }}
+                  onClick={() => router.push('/vote')}
+                >
+                  Vote
+                </Button>
                 <Popover>
                   <PopoverTrigger>
                     <Button
-                      sx={{ borderRadius: "0px" }}
                       bg={bg}
                       color="black.700"
                       display="inline-flex"
@@ -751,7 +565,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Our Works 
+                       Free Channels 
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -771,7 +585,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Our Works
+                      CREATIVE Kids
                     </Button>
                     <Button
                       bg={bg}
@@ -785,45 +599,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Case Details
-                    </Button>
-                  </PopoverContent>
-                </Popover>
-                <Popover>
-                  <PopoverTrigger>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      display="inline-flex"
-                      alignItems="center"
-                      px="0"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      rightIcon={<IoIosArrowDown />}
-                    >
-                       News 
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    w="15vw"
-                    maxW="md"
-                    _focus={{ boxShadow: 'md' }}
-                  >
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      News Sidebar
+                      News
                     </Button>
                     <Button
                       bg={bg}
@@ -837,49 +613,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      News Horizontal Boxes
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      News Full Width
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Single Post Sidebar
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Single Post Full Width
+                      Learning
                     </Button>
                   </PopoverContent>
                 </Popover>
@@ -900,7 +634,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Shop 
+                       Community
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -908,120 +642,11 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
                   >
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop List
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Lookbook
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Collection
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Page
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Big Images
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shop Product Big Slider
-                    </Button>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      Shopping Bag
-                    </Button>
+                    <Features />
                   </PopoverContent>
                 </Popover>
+                
+              {/* <NotificationDrawer /> */}
               </HStack>
             </Flex>
               
@@ -1049,17 +674,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 onClick={mobileNav.onOpen}
               />
               <FaUser className='user-icon' />
-              <Box className='shopping-box' display={{ base: 'flex' }}>
-                <FaShoppingBag />
-                <Box className='value-box'>
-                  <Text className='value-bag' size="sm" fontWeight="700">
-                    0
-                  </Text>
-                </Box>
-              </Box>
-              <Text fontWeight="700">
-                  USD
-              </Text>
             </HStack>
           </Flex>
           {MobileNavContent}
