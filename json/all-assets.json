@@ -1,5 +1,36 @@
 [
     {
+        "id": "5bff9f56-96d0-40b7-a704-cd260e8e3fca",
+        "hash": [
+            {
+                "hash": "6cff9004d995b5c929ce90e391100996",
+                "algorithm": "md5"
+            },
+            {
+                "hash": "6235017edb3f692d01308a2c1c35002ec41d00b3ac247f72ba5c646ae53b7f9e",
+                "algorithm": "sha256"
+            }
+        ],
+        "name": "SampleVideo_1280x720_2mb.mp4",
+        "size": 2107842,
+        "source": {
+            "type": "directUpload"
+        },
+        "status": {
+            "phase": "ready",
+            "updatedAt": 1672066243751
+        },
+        "userId": "03db3da7-be43-4df3-961b-142ce7b6c9c5",
+        "createdAt": 1672066185801,
+        "videoSpec": {
+            "format": "mp4",
+            "duration": 13.504
+        },
+        "playbackId": "5bffr4wk5j2e38xo",
+        "playbackUrl": "https://lp-playback.com/hls/5bffr4wk5j2e38xo/index.m3u8",
+        "downloadUrl": "https://lp-playback.com/hls/5bffr4wk5j2e38xo/video"
+    },
+    {
         "id": "19a5166e-5bf7-4b70-afb9-cb334deb8d90",
         "hash": [
             {

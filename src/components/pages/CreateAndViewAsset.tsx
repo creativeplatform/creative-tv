@@ -11,6 +11,9 @@ import {
 import { useRouter } from 'next/router'
 const CreateAndViewAsset = () => {
     const [video, setVideo] = useState<File | undefined>();
+
+    
+
     const {
       mutate: createAsset,
       data: asset,
@@ -109,6 +112,7 @@ const CreateAndViewAsset = () => {
               Upload
             </Button>
           )}
+          
         </Flex>
       </Box>
     );

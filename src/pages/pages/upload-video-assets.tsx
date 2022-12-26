@@ -18,15 +18,9 @@ export default function Home() {
         <Header>
             {''}
         </Header>
-        { assetId ? 
-          <UpdateVideoAsset>
-              {''}
-          </UpdateVideoAsset>
-        :
           <UploadVideoAsset>
               {''}
           </UploadVideoAsset>
-        }
       </>
       
   )

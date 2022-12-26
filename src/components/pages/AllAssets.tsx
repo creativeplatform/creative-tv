@@ -10,23 +10,33 @@ from '@chakra-ui/react'
   interface HeaderProps {
     children: ReactNode
   }
-
+  
   const AllAssets = ({ children }: HeaderProps): JSX.Element => {
-    const router = useRouter()
-    const [data, setData] = useState<any[]>([]);
-
+      const router = useRouter()
+      const [data, setData] = useState<any[]>([]);
+      
     // For Live
-    // useEffect(() => {
-    //     fetch("https://livepeer.studio/api/asset",{
-    //         method: 'GET',
-    //         headers: {
-    //             'Authorization': 'Bearer 9f960c6e-23a0-43ee-8858-3624d8f9a211',
+    // try {
+    //     useEffect(() => {
+    //         fetch("https://livepeer.studio/api/asset",
+    //         {
+    //             mode: 'cors',
+    //             method: 'GET',
+    //             headers: {
+    //                 // 'Authorization': 'Bearer 9f960c6e-23a0-43ee-8858-3624d8f9a211',
+    //                 'Authorization': 'Bearer 16e40571-6c0d-43a7-a02a-cb20dd7d28b8',
+    //                 'Access-Control-Allow-Origin': '*',
+    //                 'Content-Type': 'application/json; charset=UTF-8',
+    //             }
     //         }
-    //     })
+    //     )
     //       .then((res) => res.json())
     //       .then((res) => setData(JSON.parse(res.data)));
-    //   }, []);
-
+    //     }, []);
+    // } catch (error) {
+    //     console.log('Error is ',error)
+    // }
+    
     // For Local
     useEffect(() => {
         fetch("/api/all-assets")
@@ -70,7 +80,7 @@ from '@chakra-ui/react'
                         <ButtonGroup spacing='2'>
                         {post?.status?.phase === 'ready' &&
                             post?.storage?.status?.phase !== 'ready' ?
-                            <Button onClick={() => router.push(`/pages/upload-video-assets?assetId=${post.id}`)} className='card-mint-button'>
+                            <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'>
                                 Update Asset
                             </Button>
                         :

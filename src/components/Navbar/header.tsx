@@ -298,7 +298,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Free Channels 
+                       Free Channels
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -333,46 +333,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => router.push('')}
                     >
-                      Case Details
-                    </Button>
-                  </PopoverContent>
-                </Popover>
-                <Popover>
-                  <PopoverTrigger>
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      display="inline-flex"
-                      alignItems="center"
-                      px="0"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      rightIcon={<IoIosArrowDown />}
-                    >
-                       News 
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    w="15vw"
-                    maxW="md"
-                    className='content_child_items'
-                    _focus={{ boxShadow: 'md' }}
-                  >
-                    <Button
-                      bg={bg}
-                      color="black.700"
-                      px="0"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="14px"
-                      fontWeight={700}
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: 'none' }}
-                      onClick={() => router.push('')}
-                    >
-                      News Sidebar
+                      News
                     </Button>
                     <Button
                       bg={bg}
@@ -424,17 +385,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
               {/* <NotificationDrawer /> */}
                 <Box className='mobile-icon-box'>
                   <FaUser className='user-icon' />
-                    <Box className='shopping-box' display={{ base: 'flex' }}>
-                      <FaShoppingBag />
-                      <Box className='value-box'>
-                        <Text className='value-bag' size="sm" fontWeight="700">
-                          0
-                        </Text>
-                      </Box>
-                    </Box>
-                    <Text fontWeight="700">
-                        USD
-                    </Text>
                 </Box>
               </HStack>
             </Flex> 

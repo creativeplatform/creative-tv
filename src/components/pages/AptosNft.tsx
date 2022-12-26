@@ -38,7 +38,7 @@ const AptosNft = () => {
         await window.aptos.connect();
         const account: { address: string } = await window.aptos.account();
  
-        setAddress(account.address);
+        setAddress(account.address);    
       }
     } catch (e) {
       console.error(e);
