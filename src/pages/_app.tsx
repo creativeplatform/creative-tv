@@ -11,7 +11,7 @@ import '../styles/globals.css'
 const walletClient = createClient(
   getDefaultClient({
     appName: "CRTV",
-    alchemyId: "https://polygon-mumbai.g.alchemy.com/v2/_wqOpwbI6KMgU_e-SmN3OuBQCz4kwrTr",
+    alchemyId: process.env.ALCHEMY_API_KEY,
     chains: [polygonMumbai]
   }),
 );
