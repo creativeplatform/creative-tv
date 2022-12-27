@@ -6,7 +6,7 @@ import {
     Button, Container, Breadcrumb, Box, BreadcrumbLink, 
     Flex, BreadcrumbItem, SimpleGrid, AspectRatio, Badge } 
 from '@chakra-ui/react'
-  
+  import axios from 'axios'
   interface HeaderProps {
     children: ReactNode
   }
@@ -16,33 +16,30 @@ from '@chakra-ui/react'
       const [data, setData] = useState<any[]>([]);
       
     // For Live
-    // try {
-    //     useEffect(() => {
-    //         fetch("https://livepeer.studio/api/asset",
-    //         {
-    //             mode: 'cors',
-    //             method: 'GET',
-    //             headers: {
-    //                 // 'Authorization': 'Bearer 9f960c6e-23a0-43ee-8858-3624d8f9a211',
-    //                 'Authorization': 'Bearer 16e40571-6c0d-43a7-a02a-cb20dd7d28b8',
-    //                 'Access-Control-Allow-Origin': '*',
-    //                 'Content-Type': 'application/json; charset=UTF-8',
-    //             }
-    //         }
-    //     )
+    useEffect(() => {
+        try {
+                fetch("https://livepeer.studio/api/asset",
+                {
+                    method: 'GET',
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STUDIO_API_KEY}`,
+                        Accept: 'application/json',
+                    }
+                }
+            )
+              .then((res) => res.json()) 
+              .then((res) => setData(res));
+        } catch (error) {
+            console.log('Error is ',error)
+        }
+    }, []);
+
+    // For Local
+    // useEffect(() => {
+    //     fetch("/api/all-assets")
     //       .then((res) => res.json())
     //       .then((res) => setData(JSON.parse(res.data)));
-    //     }, []);
-    // } catch (error) {
-    //     console.log('Error is ',error)
-    // }
-    
-    // For Local
-    useEffect(() => {
-        fetch("/api/all-assets")
-          .then((res) => res.json())
-          .then((res) => setData(JSON.parse(res.data)));
-      }, []);
+    //   }, []);
 
     return (
         <Box>

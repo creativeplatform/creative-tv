@@ -136,7 +136,7 @@ const AptosNft = () => {
   
   return (
     <Box className='address-mint'>
-      <Button
+      <Button className='card-mint-button'
         disabled={!isAptosDefined || Boolean(address)}
         onClick={connectWallet}
       >
@@ -151,7 +151,7 @@ const AptosNft = () => {
           <Flex>
             {asset?.status?.phase === 'ready' &&
             asset?.storage?.status?.phase !== 'ready' ? (
-              <Button
+              <Button className='card-mint-button'
                 onClick={() => {
                   updateAsset?.();
                 }}
@@ -162,11 +162,11 @@ const AptosNft = () => {
                 Upload to IPFS
               </Button>
             ) : creationHash ? (
-              <a href={`https://explorer.aptoslabs.com/txn/${creationHash}?network=Devnet`}>
+              <a href={`https://explorer.aptoslabs.com/txn/${creationHash}?network=Devnet`} className='card-mint-button'>
                 View Mint Transaction
               </a>
             ) : asset?.storage?.status?.phase === 'ready' ? (
-              <Button
+              <Button className='card-mint-button'
                 onClick={mintNft}
               >
                 Mint NFT
