@@ -137,10 +137,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/discover')}
@@ -166,7 +168,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="13vw"
                     maxW="md"
                     className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
@@ -274,10 +276,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/vote')}
@@ -302,7 +306,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="13vw"
                     maxW="md"
                     className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
@@ -374,7 +378,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
-                    className='content_child_items'
+                    className='content_child_items new-features'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Features />
@@ -463,10 +467,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/discover')}
@@ -491,9 +497,10 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="18vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
+                    className="content-items"
                   >
                     <Button
                       bg={bg}
@@ -598,10 +605,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/vote')}
@@ -626,9 +635,10 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="18vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
+                    className="content-items"
                   >
                     <Button
                       bg={bg}

@@ -73,7 +73,7 @@ const CreateAndViewAsset = () => {
             <Box className='dropZone' as="div" {...getRootProps()}>
               <Box as="input" {...getInputProps()} />
               <Box as="span">
-                <Text>Drag and drop or browse files</Text>
+                <Text className='drag-txt'>Drag and drop or browse files</Text>
               </Box>
             </Box>
    

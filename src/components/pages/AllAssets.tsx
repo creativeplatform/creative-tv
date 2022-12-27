@@ -74,7 +74,7 @@ from '@chakra-ui/react'
                     </CardBody>
                     <Divider />
                     <CardFooter>
-                        <ButtonGroup spacing='2'>
+                        <ButtonGroup spacing='2' className='assets-btn-group'>
                         {post?.status?.phase === 'ready' &&
                             post?.storage?.status?.phase !== 'ready' ?
                             <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'>
