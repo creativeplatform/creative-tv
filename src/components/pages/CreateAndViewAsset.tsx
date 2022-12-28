@@ -7,10 +7,13 @@ import {
     Box, Text, Badge, Button, Flex
   } from "@chakra-ui/react";
   import NextLink from 'next/link'
-// import {createError, createStatus}  from 'http-errors';
 
+import { useRouter } from 'next/router'
 const CreateAndViewAsset = () => {
     const [video, setVideo] = useState<File | undefined>();
+
+    
+
     const {
       mutate: createAsset,
       data: asset,
@@ -62,7 +65,7 @@ const CreateAndViewAsset = () => {
           : null,
       [progress],
     );
-   
+    const router = useRouter()
     return (
       <Box>
         {!asset && (
@@ -70,7 +73,7 @@ const CreateAndViewAsset = () => {
             <Box className='dropZone' as="div" {...getRootProps()}>
               <Box as="input" {...getInputProps()} />
               <Box as="span">
-                <Text>Drag and drop or browse files</Text>
+                <Text className='drag-txt'>Drag and drop or browse files</Text>
               </Box>
             </Box>
    
@@ -81,11 +84,7 @@ const CreateAndViewAsset = () => {
         {asset?.[0]?.playbackId && (
             <Player title={asset[0].name} playbackId={asset[0].playbackId} />
         )}
-        {asset?.[0]?.playbackId && (
-            <NextLink href={`/mint-nft-video?assetId=${asset[0].id}`} target='_blank' passHref className='mint-button'>
-                Mint NFT
-            </NextLink>
-        )}
+        
    
         <Flex className='upload-button'>
           <Flex>
@@ -109,7 +108,15 @@ const CreateAndViewAsset = () => {
               Upload
             </Button>
           )}
+          
         </Flex>
+        {asset?.[0]?.playbackId && (
+            <Box className='Proceed-button'>
+              <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'>
+                  Proceed to Mint NFT
+              </Button>
+            </Box>
+        )}
       </Box>
     );
   };

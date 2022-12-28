@@ -74,9 +74,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
   const router = useRouter()
   const toast = useToast()
 
-
-
-
   const [y, setY] = useState(0)
   const { scrollY } = useScroll()
   const mobileNav = useDisclosure()
@@ -124,7 +121,6 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
           >
             <Flex>
             <HStack spacing="5" gap={30} display={{ base: 'flex', md: 'flex' }}>
-            <ConnectWallet />
                 <Button
                   bg={bg}
                   color="black.700"
@@ -141,10 +137,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/discover')}
@@ -159,6 +157,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       display="inline-flex"
                       alignItems="center"
                       fontSize="14px"
+                      className="content_items"
                       px="0"
                       fontWeight={700}
                       _hover={{ color: cl }}
@@ -169,10 +168,25 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="13vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/all-assets')}
+                    >
+                       All Assets
+                    </Button>
                     <Button
                       bg={bg}
                       color="black.700"
@@ -187,6 +201,20 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Upload Video Assets
                     </Button>
+                    {/* <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/play-ipfs-video')}
+                    >
+                      Play Video
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -201,8 +229,8 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Swiper Controls
                     </Button>
-                    
-                    <Button
+
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -215,7 +243,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('')}
                     >
                       FAQ
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -248,10 +276,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/vote')}
@@ -272,12 +302,13 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       _focus={{ boxShadow: 'none' }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                       Free Channels 
+                       Free Channels
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="13vw"
                     maxW="md"
+                    className='content_child_items'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Button
@@ -347,17 +378,18 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                   <PopoverContent
                     w="15vw"
                     maxW="md"
+                    className='content_child_items new-features'
                     _focus={{ boxShadow: 'md' }}
                   >
                     <Features />
                   </PopoverContent>
                 </Popover>
 
-                
+                <ConnectWallet />
               {/* <NotificationDrawer /> */}
-              <Box className='mobile-icon-box'>
-              <FaUser className='user-icon' />
-              </Box>
+                <Box className='mobile-icon-box'>
+                  <FaUser className='user-icon' />
+                </Box>
               </HStack>
             </Flex> 
           </Flex>
@@ -366,6 +398,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
       <CloseButton
         aria-label="Close menu"
         justifySelf="self-start"
+        className="close-btn"
         onClick={mobileNav.onClose}
       />
     </VStack>
@@ -434,10 +467,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/discover')}
@@ -462,10 +497,25 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="18vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
+                    className="content-items"
                   >
+                    <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/all-assets')}
+                    >
+                       All Assets
+                    </Button>
                     <Button
                       bg={bg}
                       color="black.700"
@@ -480,6 +530,20 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Upload Video Assets
                     </Button>
+                    {/* <Button
+                      bg={bg}
+                      color="black.700"
+                      px="0"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="14px"
+                      fontWeight={700}
+                      _hover={{ color: cl }}
+                      _focus={{ boxShadow: 'none' }}
+                      onClick={() => router.push('/pages/play-ipfs-video')}
+                    >
+                      Play Video
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -495,7 +559,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       Swiper Controls
                     </Button>
                     
-                    <Button
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -508,7 +572,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('')}
                     >
                       FAQ
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -541,10 +605,12 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                 </Button>
                 <Button
                   bg={bg}
-                  color="gray.500"
+                  color="black.700"
                   display="inline-flex"
                   alignItems="center"
-                  fontSize="md"
+                  fontSize="14px"
+                  px="0"
+                  fontWeight={700}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: 'none' }}
                   onClick={() => router.push('/vote')}
@@ -569,9 +635,10 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
-                    w="15vw"
+                    w="18vw"
                     maxW="md"
                     _focus={{ boxShadow: 'md' }}
+                    className="content-items"
                   >
                     <Button
                       bg={bg}
