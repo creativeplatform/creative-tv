@@ -73,8 +73,14 @@ a {
 }
 
 @media (max-width: 991px) {
-  .sc-iWOQzb, .css-1pwcm1s, .shopping-box, .chakra-text, .user-icon, .css-1yj0ggl {
+  .sc-iWOQzb, .css-1pwcm1s, .shopping-box, .user-icon, .css-1yj0ggl {
     display: none !important;
+  }
+  .css-k008qs .processing-video{
+    display: block !important;
+  }
+  .upload-button .css-k008qs {
+    width: auto !important;
   }
   .drag-txt {
     display: block !important;
@@ -204,6 +210,24 @@ a {
     margin-left: 0;
     min-width: auto !important;
   }
+  
+}
+.new-features .css-8momho {
+  flex-wrap: wrap;
+  background: #fff;
+}
+.new-features .css-8momho .chakra-stack {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.new-features div .css-1jnposs {
+  background: #f7fafc !important;
+  padding: 10px;
+  margin: 0 5px 8px;
+  text-align: center;
+  max-width: 175px;
+  display: flex;
+  justify-content: center;
 }
 .css-70qvj9{
   padding: 30px;
@@ -225,11 +249,10 @@ a {
   text-decoration: underline;
 }
 .c-IBjNz-dVJiQK-size-default{
-  position: absolute !important;
-  left: 20% !important;
   border-radius: 20px !important;
   width: 50% !important;
   max-height: 500px !important;
+  margin: 0 auto 25px;
 }
 .dropZone{
   text-align: center;
@@ -241,9 +264,10 @@ a {
   padding: 30px 80px;
 }
 .upload-button{
-  float: right;
-  margin-right: 5%;
+  justify-content: center;
+  margin-right: 0;
   gap: 15px;
+  padding: 0 2%;
 }
 .video-name{
   padding: 15px;
@@ -256,11 +280,11 @@ a {
   padding: 15px;
   border-radius: 10px;
 }
+.Proceed-button.css-0 {
+  text-align: center;
+  margin: 30px;
+}
 .mint-button{
-  position: absolute;
-  left: 57%;
-  top: 500px;
-
   padding: 14px 24px !important;
   color: #ffffff !important;
   background: #EC407A !important;
@@ -295,6 +319,7 @@ a {
   padding: 20px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .css-11yhd7m{
   width: 100% !important;
@@ -314,4 +339,31 @@ a {
 .assets-btn-group {
   width: -webkit-fill-available;
   justify-content: space-around;
+}
+.upload-button .video-name, .upload-button .views-video  {
+  padding: 12px 9px;
+  margin: 0 5px;
+  border-radius: 9px;
+}
+button.chakra-button.card-mint-button {
+  word-break: break-all;
+  white-space: break-spaces;
+}
+
+@media (max-width: 767.98px){
+  .parent-dropZone {
+    padding: 20px 25px;
+  }
+  .upload-button, .css-k008qs{
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+  .c-IBjNz-dVJiQK-size-default{
+    width: 85% !important;
+  }
+
+  .upload-button .video-name, .upload-button .views-video  {
+    margin: 0 5px 5px;
+  }
 }

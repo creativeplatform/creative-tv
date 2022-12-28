@@ -84,11 +84,7 @@ const CreateAndViewAsset = () => {
         {asset?.[0]?.playbackId && (
             <Player title={asset[0].name} playbackId={asset[0].playbackId} />
         )}
-        {asset?.[0]?.playbackId && (
-            <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'>
-                Proceed to Mint NFT
-            </Button>
-        )}
+        
    
         <Flex className='upload-button'>
           <Flex>
@@ -114,6 +110,13 @@ const CreateAndViewAsset = () => {
           )}
           
         </Flex>
+        {asset?.[0]?.playbackId && (
+            <Box className='Proceed-button'>
+              <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'>
+                  Proceed to Mint NFT
+              </Button>
+            </Box>
+        )}
       </Box>
     );
   };

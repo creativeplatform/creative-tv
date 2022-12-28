@@ -201,7 +201,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Upload Video Assets
                     </Button>
-                    <Button
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -214,7 +214,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('/pages/play-ipfs-video')}
                     >
                       Play Video
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -230,7 +230,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       Swiper Controls
                     </Button>
 
-                    <Button
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -243,7 +243,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('')}
                     >
                       FAQ
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -530,7 +530,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                     >
                       Upload Video Assets
                     </Button>
-                    <Button
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -543,7 +543,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('/pages/play-ipfs-video')}
                     >
                       Play Video
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
@@ -559,7 +559,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       Swiper Controls
                     </Button>
                     
-                    <Button
+                    {/* <Button
                       bg={bg}
                       color="black.700"
                       px="0"
@@ -572,7 +572,7 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
                       onClick={() => router.push('')}
                     >
                       FAQ
-                    </Button>
+                    </Button> */}
                     <Button
                       bg={bg}
                       color="black.700"
