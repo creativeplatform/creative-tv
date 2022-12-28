@@ -4,7 +4,7 @@ import {
   } from "@chakra-ui/react";
   import { useRouter } from 'next/router'
   import React, { ReactNode } from 'react'
-  import CreateAndViewAsset from './CreateAndViewAsset'
+  import UpdateAsset from './UpdateAsset'
 
   import {
     LivepeerConfig,
@@ -22,7 +22,7 @@ import {
     }),
   });
 
-  const UploadVideoAsset = ({ children }: HeaderProps): JSX.Element => {
+  const UpdateVideoAsset = ({ children }: HeaderProps): JSX.Element => {
     const router = useRouter()
     return (
         <Box>
@@ -32,13 +32,13 @@ import {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem isCurrentPage className="active-crumb">
-                    <BreadcrumbLink href='#'>Upload Video Assets</BreadcrumbLink>
+                    <BreadcrumbLink href='#'>Update Video Assets</BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
             <LivepeerConfig client={livepeerClient}>
-                <CreateAndViewAsset />
+                <UpdateAsset />
             </LivepeerConfig>
         </Box>
     );
 }
-export default UploadVideoAsset
+export default UpdateVideoAsset

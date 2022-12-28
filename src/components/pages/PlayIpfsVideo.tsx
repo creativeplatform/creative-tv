@@ -1,29 +1,26 @@
+import { useRouter } from 'next/router'
+import React, { ReactNode } from "react";
+import { DecentralizedStoragePlayback } from './DecentralizedStoragePlayback'
 import {
-    Box,
-    Breadcrumb, BreadcrumbItem, BreadcrumbLink
-  } from "@chakra-ui/react";
-  import { useRouter } from 'next/router'
-  import React, { ReactNode } from 'react'
-  import CreateAndViewAsset from './CreateAndViewAsset'
-
-  import {
     LivepeerConfig,
     createReactClient,
     studioProvider,
   } from '@livepeer/react';
+import {
+  Box, BreadcrumbItem, BreadcrumbLink, Breadcrumb
+} from "@chakra-ui/react";
   
   interface HeaderProps {
     children: ReactNode
   }
 
-  const livepeerClient = createReactClient({
-    provider: studioProvider({
-      apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
-    }),
-  });
-
-  const UploadVideoAsset = ({ children }: HeaderProps): JSX.Element => {
+  const PlayIpfsVideo = ({ children }: HeaderProps): JSX.Element => {
     const router = useRouter()
+    const livepeerClient = createReactClient({
+        provider: studioProvider({
+            apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
+        }),
+    });
     return (
         <Box>
             <Breadcrumb>
@@ -32,13 +29,14 @@ import {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem isCurrentPage className="active-crumb">
-                    <BreadcrumbLink href='#'>Upload Video Assets</BreadcrumbLink>
+                    <BreadcrumbLink href='#'>Play IPFS Video</BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
             <LivepeerConfig client={livepeerClient}>
-                <CreateAndViewAsset />
+                <DecentralizedStoragePlayback />
             </LivepeerConfig>
         </Box>
     );
 }
-export default UploadVideoAsset
+export default PlayIpfsVideo
+  
