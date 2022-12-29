@@ -5,7 +5,7 @@ import UploadVideoAsset from '../../components/pages/UploadVideoAsset'
 import UpdateVideoAsset from '../../components/pages/UpdateVideoAsset'
 
 
-export default function Home() {
+export default function Upload() {
   
   const router = useRouter();
   const assetId = useMemo(
