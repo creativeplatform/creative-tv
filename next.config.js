@@ -9,11 +9,11 @@ const nextConfig = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      '/all-assets': {page: '/All'},
-      '/mint-nft-video': {page: '/Mint'},
-      '/play-video': {page: '/PlayVideo'},
-      '/swiper-controls': {page: '/Swiper'},
-      '/upload-video-assets': {page: '/Upload'},
+      '/All': {page: '/all-assets'},
+      '/Mint': {page: '/mint-nft-video'},
+      '/PlayVideo': {page: '/play-video'},
+      '/Swiper': {page: '/swiper-controls'},
+      '/Upload': {page: '/upload-video-assets'},
     }
   },
   webpack(config) {
