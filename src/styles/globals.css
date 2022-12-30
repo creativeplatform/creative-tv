@@ -292,8 +292,9 @@ a {
   font-weight: 500 !important;
   border-radius: 10rem !important;
   box-shadow: 0 4px 24px -6px #ec407a !important;
-  -webkit-transition: 200ms ease !important;
-  transition: 200ms ease !important;
+  cursor: pointer !important;
+  /* -webkit-transition: 200ms ease !important; */
+  /* transition: 200ms ease !important; */
 }
 .card-mint-button{
   position: absolute;
@@ -304,17 +305,11 @@ a {
   font-weight: 500 !important;
   border-radius: 10rem !important;
   box-shadow: 0 4px 24px -6px #ec407a !important;
-  -webkit-transition: 200ms ease !important;
-  transition: 200ms ease !important;
+  cursor: pointer !important;
+  /* -webkit-transition: 200ms ease !important; */
+  /* transition: 200ms ease !important; */
 }
-.card-mint-button:hover{
-  transform: translateY(-6px) !important;
-  box-shadow: 0 6px 40px -6px #ec407a !important;
-}
-.mint-button:hover{
-  transform: translateY(-6px) !important;
-  box-shadow: 0 6px 40px -6px #ec407a !important;
-}
+
 .address-mint{
   padding: 20px;
   display: flex;

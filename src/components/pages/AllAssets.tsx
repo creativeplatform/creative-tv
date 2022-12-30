@@ -7,6 +7,7 @@ import {
     Flex, BreadcrumbItem, SimpleGrid, AspectRatio, Badge } 
 from '@chakra-ui/react'
   import axios from 'axios'
+  import { motion } from "framer-motion"
   interface HeaderProps {
     children: ReactNode
   }
@@ -77,7 +78,8 @@ from '@chakra-ui/react'
                         <ButtonGroup spacing='2' className='assets-btn-group'>
                         {post?.status?.phase === 'ready' &&
                             post?.storage?.status?.phase !== 'ready' ?
-                            <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'>
+                            <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'
+                                as={motion.div} _hover={{ transform: "scale(1.1)" }}>
                                 Update Asset
                             </Button>
                         :
@@ -86,12 +88,13 @@ from '@chakra-ui/react'
                             </Button>
                         }
                             {post.status.phase == 'ready' ?
-                                <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'>
-                                    Mint NFT Now
+                                <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${post.id}`)} className='card-mint-button'
+                                as={motion.div} _hover={{ transform: "scale(1.1)" }}>
+                                    Mint NFT
                                 </Button>
                             :
                                 <Button disabled className='card-mint-button'>
-                                    Mint NFT Now
+                                    Mint NFT
                                 </Button>
                             }
                             
