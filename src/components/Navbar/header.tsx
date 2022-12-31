@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-import { useToast } from '@chakra-ui/react'
+import { Container, useToast } from '@chakra-ui/react'
 import { FaShoppingBag, FaUser } from 'react-icons/fa';
 import {
   Alert,
@@ -62,14 +62,14 @@ function truncateHash(hash: string, length = 38): string {
   return hash.replace(hash.substring(6, length), '...')
 }
 
-/**
- * Prop Types
- */
-interface HeaderProps {
-  children: ReactNode
-}
+// /**
+//  * Prop Types
+//  */
+// interface HeaderProps {
+//   children: ReactNode
+// }
 
-const Header = ({ children }: HeaderProps): JSX.Element => {
+const Header = () => {
   const ref = useRef(null)
   const router = useRouter()
   const toast = useToast()
@@ -716,9 +716,8 @@ const Header = ({ children }: HeaderProps): JSX.Element => {
               {/* <NotificationDrawer /> */}
               </HStack>
             </Flex>
-              
-            {children}
-            <HStack spacing="5" display={{ base: 'flex', md: 'flex' }}>
+            {/* {children} */}
+            <HStack spacing="4" display={{ base: 'flex', md: 'flex' }}>
             <ConnectWallet />
               {/* <NotificationDrawer /> */}
               <IconButton
