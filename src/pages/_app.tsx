@@ -23,7 +23,7 @@ const walletClient = createClient(
 );
 
 const client = createReactClient({
-  provider: studioProvider({ apiKey: process.env.STUDIO_API_KEY }),
+  provider: studioProvider({ apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY }),
 });
  
 const livepeerTheme: ThemeConfig = {
