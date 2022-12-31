@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import Scripts from "./Scripts";
+import Header from '../Navbar/header'
+import HeroSection from "../hero/HeroSection";
 
+const Layout = () => {
 
-
-const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-    const { runScripts } = Scripts();
-    useEffect(() => {
-        runScripts();
-    });
     return (
     <>
         <Head>
@@ -25,6 +21,9 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
         <Head>
             <link rel="icon" href="/favicon.ico" />
         </Head>
+        <Header />
+        <HeroSection />
     </>
     )
 }
+export default Layout;
