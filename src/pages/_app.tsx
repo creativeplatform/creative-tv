@@ -7,6 +7,12 @@ import { polygonMumbai } from 'wagmi/chains'
 import { getDefaultClient, ConnectKitProvider } from 'connectkit'
 import { siwe } from "../pages/api/siwe/siwe";
 import '../styles/globals.css'
+import {
+  LivepeerConfig,
+  ThemeConfig,
+  createReactClient,
+  studioProvider,
+} from '@livepeer/react';
 
 const walletClient = createClient(
   getDefaultClient({
@@ -15,6 +21,20 @@ const walletClient = createClient(
     chains: [polygonMumbai]
   }),
 );
+
+const client = createReactClient({
+  provider: studioProvider({ apiKey: process.env.STUDIO_API_KEY }),
+});
+ 
+const livepeerTheme: ThemeConfig = {
+  colors: {
+    accent: 'rgb(0, 145, 255)',
+    containerBorderColor: 'rgba(0, 145, 255, 0.9)',
+  },
+  fonts: {
+    display: 'Inter',
+  },
+};
 
 const colors = {
   brand: {
@@ -34,7 +54,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <siwe.Provider>
       <ConnectKitProvider>
         <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
+          <LivepeerConfig client={client} theme={livepeerTheme}>
+            <Component {...pageProps} />
+          </LivepeerConfig>
         </ChakraProvider>
       </ConnectKitProvider>
       </siwe.Provider>
