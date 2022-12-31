@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from '../Navbar/header'
 import HeroSection from "../hero/HeroSection";
+import FeaturedVideo from "../featured/FeaturedVideo";
 
 const Layout = () => {
 
@@ -23,6 +24,7 @@ const Layout = () => {
         </Head>
         <Header />
         <HeroSection />
+        <FeaturedVideo />
     </>
     )
 }
