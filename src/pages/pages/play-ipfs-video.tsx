@@ -5,9 +5,7 @@ import PlayIpfsVideo from '../../components/pages/PlayIpfsVideo'
 export default function PlayVideo() {
   return (
       <>
-        <Header>
-            {''}
-        </Header>
+        <Header />
         <PlayIpfsVideo>
             {''}
         </PlayIpfsVideo>

@@ -59,22 +59,21 @@ const FeaturedVideo = () => {
         maxW="xl"
       >
         <div className="about_secondary">
-                        <div className="about_secondary-row h1">
-                            Strike. <span className="highlight aos-init aos-animate" data-aos="fade-left">Watch.</span> Brand. Challenge.
-                        </div>
-                        <div className="about_secondary-row h1">
-                            Brand.
-                            <span className="highlight highlight--purple aos-init aos-animate" data-aos="fade-left" data-aos-delay="50"> Stream.</span> Create.
-                            Inspire. Dream.
-                        </div>
-                        <div className="about_secondary-row h1">
-                            Stream. <span className="highlight aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">Create.</span> Stars. Watch. Reinvent.
-                        </div>
-                    </div>
+          <div className="about_secondary-row h1">
+              Strike. <span className="highlight aos-init aos-animate" data-aos="fade-left">Watch.</span> Brand. Challenge.
+          </div>
+          <div className="about_secondary-row h1">
+              Brand.
+              <span className="highlight highlight--purple aos-init aos-animate" data-aos="fade-left" data-aos-delay="50"> Stream.</span> Create.
+              Inspire. Dream.
+          </div>
+          <div className="about_secondary-row h1">
+              Stream. <span className="highlight aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">Create.</span> Stars. Watch. Reinvent.
+          </div>
+        </div>
       </Stack>
     </Stack>
     </Box>
   );
 };
-
 export default FeaturedVideo;
