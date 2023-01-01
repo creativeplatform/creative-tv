@@ -10,7 +10,7 @@ const theme = {
       }
     }
   },
-  breakpoints: createBreakpoints({
+  breakpoints: ({
     xs: "30em",
     sm: "36em",
     md: "46.25em",

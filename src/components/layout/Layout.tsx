@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from '../Navbar/header'
 import HeroSection from "../hero/HeroSection";
 import FeaturedVideo from "../featured/FeaturedVideo";
+import SwiperControls from '../../components/pages/SwiperControls'
 
 const Layout = () => {
 
@@ -25,6 +26,9 @@ const Layout = () => {
         <Header />
         <HeroSection />
         <FeaturedVideo />
+        <SwiperControls>
+            {''}
+        </SwiperControls>
     </>
     )
 }
