@@ -15,6 +15,7 @@ import { AptosContext } from './MintNftVideo';
 import {
   Box,Button,Flex
 } from "@chakra-ui/react";
+import { motion } from "framer-motion"
 
 declare global {
   interface Window {
@@ -137,6 +138,7 @@ const AptosNft = () => {
   return (
     <Box className='address-mint'>
       <Button className='card-mint-button'
+      as={motion.div} _hover={{ transform: "scale(1.1)" }}
         disabled={!isAptosDefined || Boolean(address)}
         onClick={connectWallet}
       >
@@ -152,6 +154,7 @@ const AptosNft = () => {
             {asset?.status?.phase === 'ready' &&
             asset?.storage?.status?.phase !== 'ready' ? (
               <Button className='card-mint-button'
+              as={motion.div} _hover={{ transform: "scale(1.1)" }}
                 onClick={() => {
                   updateAsset?.();
                 }}
@@ -167,6 +170,7 @@ const AptosNft = () => {
               </a>
             ) : asset?.storage?.status?.phase === 'ready' ? (
               <Button className='card-mint-button'
+              as={motion.div} _hover={{ transform: "scale(1.1)" }}
                 onClick={mintNft}
               >
                 Mint NFT

@@ -4,11 +4,13 @@ import { useCallback, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 import {
-    Box, Text, Badge, Button, Flex
+    Box, Text, Badge, Button, Flex, keyframes
   } from "@chakra-ui/react";
   import NextLink from 'next/link'
-
+  import { motion } from "framer-motion"
 import { useRouter } from 'next/router'
+
+
 const CreateAndViewAsset = () => {
     const [video, setVideo] = useState<File | undefined>();
 
@@ -100,6 +102,8 @@ const CreateAndViewAsset = () => {
           </Flex>
           {!asset?.[0].id && (
             <Button
+            className='mint-button'
+            as={motion.div} _hover={{ transform: "scale(1.1)" }}
               onClick={() => {
                 createAsset?.();
               }}
@@ -112,7 +116,8 @@ const CreateAndViewAsset = () => {
         </Flex>
         {asset?.[0]?.playbackId && (
             <Box className='Proceed-button'>
-              <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'>
+              <Button onClick={() => router.push(`/pages/mint-nft-video?assetId=${asset[0].id}`)} className='mint-button'
+                      as={motion.div} _hover={{ transform: "scale(1.1)" }}>
                   Proceed to Mint NFT
               </Button>
             </Box>
