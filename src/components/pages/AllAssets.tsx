@@ -1,10 +1,9 @@
-import { useRouter } from 'next/router'
 import React, { ReactNode, useState, useEffect } from "react";
+import { useRouter } from 'next/router'
 import { 
-    Card, CardHeader, CardBody, CardFooter, Image, 
-    Stack, Heading, Text, Divider, ButtonGroup, 
-    Button, Container, Breadcrumb, Box, BreadcrumbLink, 
-    Flex, BreadcrumbItem, SimpleGrid, AspectRatio, Badge } 
+    Card, CardBody, CardFooter, Image, 
+    Stack, Heading, Divider, ButtonGroup, 
+    Button, Box, SimpleGrid, AspectRatio, Badge } 
 from '@chakra-ui/react'
   import axios from 'axios'
   import { motion } from "framer-motion"
@@ -44,15 +43,6 @@ from '@chakra-ui/react'
 
     return (
         <Box>
-            <Breadcrumb>
-                <BreadcrumbItem>
-                    <BreadcrumbLink onClick={() => router.push('/')}>Home</BreadcrumbLink>
-                </BreadcrumbItem>
-
-                <BreadcrumbItem isCurrentPage className="active-crumb">
-                    <BreadcrumbLink href='#'>All Assets</BreadcrumbLink>
-                </BreadcrumbItem>
-            </Breadcrumb>
             <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
             {data.slice(0, data.length).map((post, index) => (
                 <Card key={post.id}>
