@@ -15,13 +15,10 @@ export default function Upload() {
 
   return (
       <>
-        <Header>
-            {''}
-        </Header>
+        <Header />
           <UploadVideoAsset>
               {''}
           </UploadVideoAsset>
       </>
-      
   )
 }
