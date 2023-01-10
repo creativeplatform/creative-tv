@@ -5,9 +5,7 @@ import MintNftVideo from '../../components/pages/MintNftVideo'
 export default function Mint() {
   return (
       <>
-        <Header>
-            {''}
-        </Header>
+        <Header />
         <MintNftVideo>
             {''}
         </MintNftVideo>
